@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:incubator/view/privacy_page.dart';
 import 'package:incubator/view/profile_page.dart';
 
 import '../controllers/main_wrapper_controller.dart';
@@ -23,6 +24,10 @@ class _SettingsTabState extends State<SettingsTab> {
 
   void navigateToProfile() {
     Get.to(() => const ProfilePage());
+  }
+
+  void navigateToPrivacySecurity() {
+    Get.to(() => const PrivacyPage());
   }
 
   @override
@@ -64,6 +69,11 @@ class _SettingsTabState extends State<SettingsTab> {
                 title: 'My Profile',
                 icon: CupertinoIcons.person,
                 onTapCustom: navigateToProfile,
+              ),
+              _CustomListTile(
+                title: 'Privacy and Security',
+                icon: CupertinoIcons.shield,
+                onTapCustom: navigateToPrivacySecurity,
               ),
               _CustomListTile(
                 title: 'Logout',

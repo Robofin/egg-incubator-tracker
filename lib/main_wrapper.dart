@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:iconly/iconly.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
-import 'controller/main_wrapper_controller.dart';
+import 'controllers/main_wrapper_controller.dart';
 import 'utils/color_constants.dart';
 
 class MainWrapper extends StatelessWidget {
@@ -18,22 +18,10 @@ class MainWrapper extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            'Bottom AppBar Example',
-            style: Theme.of(context).textTheme.subtitle1,
+            'Eggy',
+            style: Theme.of(context).textTheme.titleMedium,
           ),
           centerTitle: true,
-          actions: [
-            Obx(
-              () => Switch.adaptive(
-                value: _mainWrapperController.isDarkTheme.value,
-                onChanged: (newVal) {
-                  _mainWrapperController.isDarkTheme.value = newVal;
-                  _mainWrapperController
-                      .switchTheme(newVal ? ThemeMode.dark : ThemeMode.light);
-                },
-              ),
-            )
-          ],
         ),
         bottomNavigationBar: BottomAppBar(
           elevation: 0,
@@ -61,10 +49,10 @@ class MainWrapper extends StatelessWidget {
                       context,
                       label: 'Statistics'),
                   _bottomAppBarItem(
-                      icon: IconlyLight.profile,
+                      icon: IconlyLight.setting,
                       page: 3,
                       context,
-                      label: 'Profile'),
+                      label: 'Settings'),
                 ],
               ),
             ),

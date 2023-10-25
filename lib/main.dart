@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:incubator/utils/themes.dart';
 
-import '../../controller/main_wrapper_controller.dart';
-import '../../main_wrapper.dart';
-import '../../utils/themes.dart';
+import 'controllers/main_wrapper_controller.dart';
+import 'main_wrapper.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Bottom AppBar',
+      title: 'Eggy',
       debugShowCheckedModeBanner: false,
       theme: Themes.lightTheme,
       darkTheme: Themes.darkTheme,

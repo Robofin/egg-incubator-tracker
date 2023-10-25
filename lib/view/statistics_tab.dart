@@ -6,18 +6,20 @@ class StatisticsTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(
-          'Statistics',
-          style: Theme.of(context).textTheme.headline1,
-        ),
-        const Icon(
-          IconlyLight.chart,
-          size: 40,
-        ),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            'Statistics',
+            style: Theme.of(context).textTheme.displayLarge,
+          ),
+          const Icon(
+            IconlyLight.chart,
+            size: 40,
+          ),
+        ],
+      ),
     );
   }
 }

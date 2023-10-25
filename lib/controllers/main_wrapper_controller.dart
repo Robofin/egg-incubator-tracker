@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../view/cart_tab.dart';
+import '../view/wallet_tab.dart';
 import '../view/home_tab.dart';
-import '../view/profile_tab.dart';
+import '../view/settings_tab.dart';
 import '../view/statistics_tab.dart';
 
 class MainWrapperController extends GetxController {
@@ -14,9 +14,9 @@ class MainWrapperController extends GetxController {
 
   List<Widget> pages = [
     const HomeTab(),
-    const CartTab(),
+    const WalletTab(),
     const StatisticsTab(),
-    const ProfileTab(),
+    const SettingsTab(),
   ];
 
   ThemeMode get theme => Get.isDarkMode ? ThemeMode.dark : ThemeMode.light;

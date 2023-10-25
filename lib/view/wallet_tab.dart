@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
 
-class CartTab extends StatelessWidget {
-  const CartTab({super.key});
+class WalletTab extends StatelessWidget {
+  const WalletTab({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,8 +11,8 @@ class CartTab extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            'Cart',
-            style: Theme.of(context).textTheme.headline1,
+            'Wallet',
+            style: Theme.of(context).textTheme.displayLarge,
           ),
           const Icon(
             IconlyLight.wallet,

@@ -1,11 +1,13 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:incubator/view/privacy_page.dart';
-import 'package:incubator/view/profile_page.dart';
+import 'package:incubator/views/privacy_page.dart';
+import 'package:incubator/views/profile_page.dart';
 
 import '../controllers/main_wrapper_controller.dart';
 import 'about_page.dart';
+import 'login_page.dart';
 
 class SettingsTab extends StatefulWidget {
   const SettingsTab({super.key});
@@ -44,22 +46,6 @@ class _SettingsTabState extends State<SettingsTab> {
                 icon: CupertinoIcons.device_phone_portrait,
                 onTapCustom: navigateToAbout,
               ),
-              _CustomListTile(
-                title: 'Dark Mode',
-                icon: CupertinoIcons.moon,
-                trailing: Obx(() {
-                  return CupertinoSwitch(
-                    value: _mainWrapperController.isDarkTheme.value,
-                    onChanged: (newVal) {
-                      _mainWrapperController.isDarkTheme.value = newVal;
-                      _mainWrapperController.switchTheme(
-                        newVal ? ThemeMode.dark : ThemeMode.light,
-                      );
-                    },
-                  );
-                }),
-                onTapCustom: () {},
-              ),
             ],
           ),
           _SingleSection(
@@ -78,7 +64,15 @@ class _SettingsTabState extends State<SettingsTab> {
               _CustomListTile(
                 title: 'Logout',
                 icon: CupertinoIcons.arrow_right_circle,
-                onTapCustom: () {},
+                onTapCustom: () {
+                  FirebaseAuth.instance.signOut();
+                  Navigator.of(context).pushAndRemoveUntil(
+                    MaterialPageRoute(
+                      builder: (context) => const LoginPage(),
+                    ),
+                    (route) => false,
+                  );
+                },
               ),
             ],
           ),

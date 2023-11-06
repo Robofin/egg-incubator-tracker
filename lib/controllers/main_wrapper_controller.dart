@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../view/wallet_tab.dart';
-import '../view/home_tab.dart';
-import '../view/settings_tab.dart';
-import '../view/statistics_tab.dart';
+import '../views/wallet_tab.dart';
+import '../views/home_tab.dart';
+import '../views/settings_tab.dart';
+import '../views/statistics_tab.dart';
 
 class MainWrapperController extends GetxController {
   late PageController pageController;

@@ -22,6 +22,18 @@ class MainWrapper extends StatelessWidget {
             style: Theme.of(context).textTheme.titleMedium,
           ),
           centerTitle: true,
+          actions: [
+            Obx(
+              () => Switch.adaptive(
+                value: _mainWrapperController.isDarkTheme.value,
+                onChanged: (newVal) {
+                  _mainWrapperController.isDarkTheme.value = newVal;
+                  _mainWrapperController
+                      .switchTheme(newVal ? ThemeMode.dark : ThemeMode.light);
+                },
+              ),
+            )
+          ],
         ),
         bottomNavigationBar: BottomAppBar(
           elevation: 0,

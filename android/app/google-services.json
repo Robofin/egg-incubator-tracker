@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "365506241472",
+    "project_id": "generic-a01f7",
+    "storage_bucket": "generic-a01f7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:365506241472:android:98878d294c84df9d70de25",
+        "android_client_info": {
+          "package_name": "com.example.incubator"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDmBnJmi6oI5BpY2xMa-Pn5xlEPlwhsNs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
